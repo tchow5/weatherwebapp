@@ -101,12 +101,21 @@ body { background-color:#333; }
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 } 
 #mainpage{
-    width: 400px;
+    width: 600px;
     height: 400px;
     z-index: 1;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-   
-
+    background-color:white;
+   /* margin: 0 auto;*/
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    opacity: 0.6;
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+   transform: translate(-50%, -50%)
+    
 }
+
+
