@@ -107,7 +107,7 @@ body { background-color:#333; }
     background-color:white;
    /* margin: 0 auto;*/
      position: absolute;
-    top: 50%;
+    /*top: 50%;
     left: 50%;
     margin-right: -50%;
     opacity: 0.6;
@@ -116,7 +116,16 @@ body { background-color:#333; }
 border-radius: 50px;
    
    transform: translate(-50%, -50%)
-    
+   */
+   top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    margin: auto;
+    opacity: 0.6;
+    -webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
 }
 
 form {
