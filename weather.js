@@ -72,6 +72,14 @@ function dataoutput(data){
 // 		console.log(data);
 // 	});
 
+$(document).ready(function(){
+	$(".button").click(function(){
+		$("#mainpage").hide();
+		$("#snow").hide();
+		$("#project_page").show();
 
+	});
+
+});
 
 
