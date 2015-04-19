@@ -98,7 +98,7 @@ function dataoutput(data){
 			var imgObj = data.current_observation[key];
 			string += "<img src="+imgObj.url+ "  >";
 		}
-		if(key == )
+		
 		string += key +":" + JSON.stringify(data.current_observation[key])  + "<br />";  
 		
 
