@@ -1,5 +1,4 @@
 var state= "";
-
 function othername(){
 
  var location = document.getElementById("newTest").value;
@@ -44,7 +43,10 @@ function ex(location){
 $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/"+state+"/"+location+".json", function(data){
 	       		// console.log(data1);
 	       		// console.log(data);
-	       		dataoutput(data);
+	       		// dataoutput("The temp in farhinet" + data.temperature_string);
+	       		// dataoutput(data);
+	       		dataoutput(data.current_observation.temperature_string);
+	       		console.log(data);
 	       });
 // $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/CA/San_Francisco.json", function(data){
 // 	       		// console.log(data1);
@@ -56,8 +58,11 @@ $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/"+state+"/"
 }
 
 function dataoutput(data){
-	document.getElementById("dataoutput").innerHTML = JSON.stringify(data); 
-	console.log(data.current_observation);
+	//var obj =JSON.parse(data);
+	document.getElementById("dataoutput").innerHTML = JSON.stringify(data);
+	//console.log(obj.response.temperature_string[0]);
+
+		console.log(data.current_observation);
 	// console.log(data.response.estimated);
 	// console.log(temperature_string);
 }
