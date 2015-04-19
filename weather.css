@@ -65,7 +65,7 @@ span {
 }*/
 
 body { background-color:#333; }
-#snow{
+/*#snow{
   background: none;
   font-family: Androgyne;
   background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
@@ -99,7 +99,7 @@ body { background-color:#333; }
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-} 
+} */
 #mainpage{
     width: 600px;
     height: 400px;
@@ -136,9 +136,14 @@ border-radius: 50px;
 
 form {
   padding-top: 2%;
-  text-align: center;
- 
+  
 }
+
+#realenter{
+
+  margin-top: 3%;
+}
+
 
 #enterbar button{
 /*height: 50px;
@@ -152,8 +157,8 @@ form {
      width: 20px;
 
 }*/
-#button{
+#/*button{
 
   padding-top: 2%;
 }
-
+*/
