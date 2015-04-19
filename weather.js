@@ -75,7 +75,7 @@ function dataoutput(data){
 $(document).ready(function(){
 	$(".button").click(function(){
 		$("#mainpage").hide();
-		$("#snow").hide();
+		// $("#snow").hide();
 		$("#project_page").show();
 
 	});
