@@ -1,4 +1,5 @@
-var state= "";
+var state = " ";
+var num = '0';
 function othername(){
 
  var location = document.getElementById("newTest").value;
@@ -45,7 +46,23 @@ $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/"+state+"/"
 	       		// console.log(data);
 	       		// dataoutput("The temp in farhinet" + data.temperature_string);
 	       		// dataoutput(data);
-	       		dataoutput(data.current_observation.temperature_string);
+	       		dataoutput(data);
+
+	       			// "The current temperature is "+data.current_observation.temperature_string +"The current due-point is "+ data.current_observation.dewpoint_string
+
+	       		
+	       		 num = Object.keys(data.current_observation).length;
+	       		console.log(Object.keys(data.current_observation).length);
+
+
+
+
+
+
+
+
+
+
 	       		console.log(data);
 	       });
 // $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/CA/San_Francisco.json", function(data){
@@ -55,19 +72,42 @@ $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/"+state+"/"
 // 	       });
 
 
-}
+
+};
+
+																			
+
 
 function dataoutput(data){
 	//var obj =JSON.parse(data);
-	document.getElementById("dataoutput").innerHTML = JSON.stringify(data);
-	//console.log(obj.response.temperature_string[0]);
+// 	for (var i = 1; i  <= num; i++) {
+		
+// 	document.getElementById("dataoutput").innerHTML = JSON.stringify(data.current_observation[i]);
+// 	//console.log(obj.response.temperature_string[0]);
 
-		console.log(data.current_observation);
-	// console.log(data.response.estimated);
-	// console.log(temperature_string);
-}
+// 		console.log(data.current_observation);
+// 	// console.log(data.response.estimated);
+// 	// console.log(temperature_string);
+// 	};
+// };
 
-// function test(){
+	var string = "";
+	for(key in data.current_observation){
+
+		if(key == "image"){
+			var imgObj = data.current_observation[key];
+			string += "<img src="+imgObj.url+ "  >";
+		}
+		if(key == )
+		string += key +":" + JSON.stringify(data.current_observation[key])  + "<br />";  
+		
+
+
+	}
+	console.log(string);
+	console.log();
+	document.getElementById("dataoutput").innerHTML = string;
+}// function test(){
 // 	$.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/CA/San_Francisco.json", function(data){
 // 		console.log(data);
 // 	});
@@ -76,7 +116,7 @@ $(document).ready(function(){
 	$(".button").click(function(){
 		$("#mainpage").hide();
 		// $("#snow").hide();
-		$("#project_page").show();
+		$("#dataoutput").show();
 
 	});
 
