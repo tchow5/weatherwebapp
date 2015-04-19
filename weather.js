@@ -1,11 +1,18 @@
-
+var state= "";
 
 function othername(){
 
- var location = document.getElementById("userInput").value;
-	
+ var location = document.getElementById("newTest").value;
+	otherstate();
 	ex(location);
 	return false;
+}
+
+function otherstate(){
+
+	 state= document.getElementById("userInput").value;
+	return false;
+
 }
 // $(document).ready(function($) {
 //     $("button").click(function() {
@@ -34,11 +41,16 @@ function ex(location){
 	        
 	//         dataoutput(data);
 	// });
-$.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/NJ/"+location+".json", function(data){
+$.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/"+state+"/"+location+".json", function(data){
 	       		// console.log(data1);
 	       		// console.log(data);
 	       		dataoutput(data);
 	       });
+// $.get("http://api.wunderground.com/api/d829236d086e9c28/conditions/q/CA/San_Francisco.json", function(data){
+// 	       		// console.log(data1);
+// 	       		// console.log(data);
+// 	       		dataoutput(data);
+// 	       });
 
 
 }
