@@ -112,6 +112,7 @@ function dataoutput(data){
 // 		console.log(data);
 // 	});
 
+
 $(document).ready(function(){
 	$(".button").click(function(){
 		$("#mainpage").hide();
