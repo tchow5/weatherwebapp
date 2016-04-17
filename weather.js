@@ -3,14 +3,18 @@ var num = '0';
 function othername(){
 
  var location = document.getElementById("newTest").value;
+	location = location.toLowerCase();
 	otherstate();
 	ex(location);
 	return false;
+
+	
 }
 
 function otherstate(){
 
 	 state= document.getElementById("userInput").value;
+	state =  state.toUpperCase();
 	return false;
 
 }
